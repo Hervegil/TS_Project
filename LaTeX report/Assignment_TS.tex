@@ -111,10 +111,10 @@
 		\begin{align*}
 			\gamma_{S}(k) &= \text{cov}(S_{t+k},S_t) \\
 			&= \text{E}(\sum_{j=-\infty}^{\infty}a_j Q_{t+k-j} \cdot \sum_{j=-\infty}^{\infty}a_j Q_{t-j} ) \\
-			&= \text{E} \left( (...a_-1 Q_{t+k+1} + a_0 Q_{t+k} + a_1 Q_{t+k-1} ...) \right. \\
-			&\cdot (...a_-1 Q_{t+1} + a_0 Q_t + a_1 Q_{t-1} ...) \left. \right) \\
-			&= ... \text{E}(a_-1 Q_{t+k+1} a_-1 Q_{t+1}) + \text{E}(a_-1 Q_{t+k+1} a_0 Q_t) \\
-			&+ \text{E}(a_-1 Q_{t+k+1} a_1 Q_t-1)... \\
+			&= \text{E} \left( (...a_{-1} Q_{t+k+1} + a_0 Q_{t+k} + a_1 Q_{t+k-1} ...) \right. \\
+			&\cdot (...a_{-1} Q_{t+1} + a_0 Q_t + a_1 Q_{t-1} ...) \left. \right) \\
+			&= ... \text{E}(a_{-1} Q_{t+k+1} a_{-1} Q_{t+1}) + \text{E}(a_{-1} Q_{t+k+1} a_0 Q_t) \\
+			&+ \text{E}(a_{-1} Q_{t+k+1} a_1 Q_{t-1})... \\
 			&= \text{E}(\sum_{r} \sum_{s} a_s Q_{t+k-r} a_r Q_{t-s}) = \text{E}(\sum_{r} \sum_{s} a_r a_s Q_{t+k-r} Q_{t-s}) \\
 			&= \sum_{r} \sum_{s} a_r a_s \text{E}(Q_{t+k-r} Q_{t-s}) = \sum_{r} \sum_{s} a_r a_s \gamma_Q (k-r+s) \\
 			&= \sum_{r} \sum_{s} a_r a_s \left( \int_{-1/2}^{1/2} \text{exp}(2\pi i \lambda (k-r+s)) f_Q(\lambda)  \right) \\
