@@ -30,7 +30,8 @@
 							\end{array}
 					\right.			
 			\end{align*}		
-			$\Rightarrow X_{t}$ is weakly stationary. No conditions for $\frac{1}{\theta}$ necessary to get stationarity on MA(q) processes. 
+			$\Rightarrow X_{t}$ is weakly stationary.\newline
+			Apart from $\theta \neq 0$, to avoid $1+|\frac{1}{\theta}|  \rightarrow \infty$, no conditions for $\frac{1}{\theta}$ necessary to get stationarity on MA(q) processes.
 			
 			
 			
@@ -99,25 +100,24 @@
 		
 		\begin{align*}
 			f_W(\lambda) &= \sum_{k=-\infty}^{\infty} \gamma_{W}(k) \text{exp}(-2\pi i \lambda k) = \gamma_{W}(0) = \sigma_{W}^2\\
-			f_{WY}(\lambda) &= \sigma_{W}^2 \left( \sum_{k=-1}^{1}(\frac{1}{\sqrt{3}}\text{exp}(2\pi i \lambda))^2\right) \\
+			f_{WY}(\lambda)&= \sigma_{W}^2 \left( \sum_{k=-1}^{1}(\frac{1}{\sqrt{3}}\text{exp}(2\pi i \lambda))^2\right) \\
 			&= \sigma_{W}^2 |A_{WY}(\lambda)|^2 \\
-			|A_{WY}(\lambda)|^2 &= \sigma_{W}^2 \left( \sum_{k=-1}^{1}(\frac{1}{\sqrt{3}}\text{exp}(2\pi i \lambda))^2\right) \\
+			|A_{WY}(\lambda)|^2 &= \left( \sum_{k=-1}^{1}(\frac{1}{\sqrt{3}}\text{exp}(2\pi i \lambda))^2\right) \\
 		\end{align*}
 		\end{enumerate}
-	\item[[ 4.]] Prove that $f_S(\lambda) = |A_SQ(\lambda)|^2 f_Q(\lambda)$ with $A_SQ(\lambda) = \sum_{j=-\infty}^{\infty}a_j \text{exp}(-2\pi i \lambda j)$
+	\item[[ 4.]] Prove that $f_S(\lambda) = |A_{SQ}(\lambda)|^2 f_Q(\lambda)$ with $A_{SQ}(\lambda) = \sum_{j=-\infty}^{\infty}a_j \text{exp}(-2\pi i \lambda j)$
 		\begin{enumerate}
 		\item[[ 4.1]] Show that 
 		\begin{align*}
 			\gamma_{S}(k) &= \text{cov}(S_{t+k},S_t) \\
-			&= \text{E}(\sum_{j=-\infty}^{\infty}a_j Q_t+k-j * \sum_{j=-\infty}^{\infty}a_j Q_t-j ) \\
-			&= \text{E}((...a_-1 Q_t+k+1 + a_0 Q_t+k + a_1 Q_t+k-1 ...) \\
-			&*(...a_-1 Q_t+1 + a_0 Q_t + a_1 Q_t-1 ...) \\
-			&= ... \text{E}(a_-1 Q_t+k+1 a_-1 Q_t+1) + \text{E}(a_-1 Q_t+k+1 a_0 Q_t) \\
-			&+ \text{E}(a_-1 Q_t+k+1 a_1 Q_t-1)... \\
-			&= \text{E}(\sum_{r} \sum_{s} a_s Q_t+k-r a_r Q_t-s) = \text{E}(\sum_{r} \sum_{s} a_r a_s Q_t+k-r Q_t-s) \\
-			&= \sum_{r} \sum_{s} a_r a_s \text{E}(Q_t+k-r Q_t-s) = \sum_{r} \sum_{s} a_r a_s \gamma_Q (k-r+s) \\
-			&= \sum_{r} \sum_{s} a_r a_s (\int_{-1/2}^{1/2} \text{exp}(2\pi i \lambda (k-r+s)) f_Q(\lambda) d\lambda ) \\
-			\text{exp}(-2\pi i \lambda k)
+			&= \text{E}(\sum_{j=-\infty}^{\infty}a_j Q_{t+k-j} \cdot \sum_{j=-\infty}^{\infty}a_j Q_{t-j} ) \\
+			&= \text{E} \left( (...a_-1 Q_{t+k+1} + a_0 Q_{t+k} + a_1 Q_{t+k-1} ...) \right. \\
+			&\cdot (...a_-1 Q_{t+1} + a_0 Q_t + a_1 Q_{t-1} ...) \left. \right) \\
+			&= ... \text{E}(a_-1 Q_{t+k+1} a_-1 Q_{t+1}) + \text{E}(a_-1 Q_{t+k+1} a_0 Q_t) \\
+			&+ \text{E}(a_-1 Q_{t+k+1} a_1 Q_t-1)... \\
+			&= \text{E}(\sum_{r} \sum_{s} a_s Q_{t+k-r} a_r Q_{t-s}) = \text{E}(\sum_{r} \sum_{s} a_r a_s Q_{t+k-r} Q_{t-s}) \\
+			&= \sum_{r} \sum_{s} a_r a_s \text{E}(Q_{t+k-r} Q_{t-s}) = \sum_{r} \sum_{s} a_r a_s \gamma_Q (k-r+s) \\
+			&= \sum_{r} \sum_{s} a_r a_s (\int_{-1/2}^{1/2} \text{exp}(2\pi i \lambda (k-r+s)) f_Q(\lambda) \text{d}\lambda ) \\
 		\end{align*}
 		\item[[ 4.2]] Prove that
 		\begin{align*}
