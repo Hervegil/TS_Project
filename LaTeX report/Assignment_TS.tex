@@ -117,15 +117,15 @@
 			&+ \text{E}(a_-1 Q_{t+k+1} a_1 Q_t-1)... \\
 			&= \text{E}(\sum_{r} \sum_{s} a_s Q_{t+k-r} a_r Q_{t-s}) = \text{E}(\sum_{r} \sum_{s} a_r a_s Q_{t+k-r} Q_{t-s}) \\
 			&= \sum_{r} \sum_{s} a_r a_s \text{E}(Q_{t+k-r} Q_{t-s}) = \sum_{r} \sum_{s} a_r a_s \gamma_Q (k-r+s) \\
-			&= \sum_{r} \sum_{s} a_r a_s \left( \int_{-1/2}^{1/2} \text{exp}(2\pi i \lambda (k-r+s)) f_Q(\lambda) \text{d}\lambda \right) \\
+			&= \sum_{r} \sum_{s} a_r a_s \left( \int_{-1/2}^{1/2} \text{exp}(2\pi i \lambda (k-r+s)) f_Q(\lambda)  \right) \\
 		\end{align*}
 		\item[[ 4.2]] Prove that
 		\begin{align*}
 			|A_SQ(\lambda)|^2 &= |\sum_{j=-\infty}^{\infty}a_j \text{exp}(-2\pi i \lambda j)|^2 \\
 			&= \sum_{r} \sum_{s} a_r a_s  \text{exp}(-2\pi i \lambda r) \text{exp}(2\pi i \lambda s) \\
 			&= \sum_{r} a_r \text{exp}(-2\pi i \lambda r) \sum_{s} a_s \text{exp}(2\pi i \lambda s) \\			
-			\gamma_{S}(k) &= \sum_{r} \sum_{s} a_r a_s (\int_{-1/2}^{1/2} \text{exp}(2\pi i \lambda (k-r+s)) f_Q(\lambda) ) \\			
-			&= \sum_{r} \sum_{s} a_r a_s  (\int_{-1/2}^{1/2} \text{exp}(2\pi i \lambda k) \text{exp}(-2\pi i \lambda r) \text{exp}(2\pi i \lambda s) f_Q(\lambda) ) \\			
+			\gamma_{S}(k) &= \sum_{r} \sum_{s} a_r a_s \left(\int_{-1/2}^{1/2} \text{exp}(2\pi i \lambda (k-r+s)) f_Q(\lambda) \right) \\			
+			&= \sum_{r} \sum_{s} a_r a_s  \left(\int_{-1/2}^{1/2} \text{exp}(2\pi i \lambda k) \text{exp}(-2\pi i \lambda r) \text{exp}(2\pi i \lambda s) f_Q(\lambda) \right) \\			
 			&= \int_{-1/2}^{1/2} \sum_{r} a_r \text{exp}(-2\pi i \lambda r) \sum_{s} a_s \text{exp}(2\pi i \lambda s) \text{exp}(2\pi i \lambda k) f_Q(\lambda) \\			
 			&= \int_{-1/2}^{1/2} |A_SQ(\lambda)|^2 \text{exp}(2\pi i \lambda k) f_Q(\lambda)
 		\end{align*}
